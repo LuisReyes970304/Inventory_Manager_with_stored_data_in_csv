@@ -61,6 +61,13 @@ menu = """
 
 """
 
+sub_menu = """
+      A. Check specific product.
+      B. Check the list of products.
+      C. Check the more expensive product.
+
+"""
+
 
 bye_message = """
 ****************************************************************
