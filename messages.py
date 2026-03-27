@@ -62,10 +62,11 @@ menu = """
 """
 
 sub_menu = """
+      Select the opction you want.
       A. Check specific product.
       B. Check the list of products.
       C. Check the more expensive product.
-
+      D. Come back to the main manu.
 """
 
 
