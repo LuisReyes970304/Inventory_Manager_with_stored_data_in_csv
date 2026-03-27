@@ -10,24 +10,32 @@ welcome_message_fun()
 keep = True
 while keep:
     menu_function()
-    question = input("Enter the option you want to select: ")
+    question = input("Choose an option: ")
     if question == "1":
         print("\nYou selected: Create a new product!")
-        name = input("Enter the product name: ")
+        name = input("Enter the product name: ").title()
         price = float(input("Enter the product price: "))
         quantity = int(input("Enter the order quantity: "))
-        app.create_new_product(name=name, price=price, quantity=quantity)
-        app.save_to_database()
+        app.add_new_order(name=name, price=price, quantity=quantity)
         print("Product added successfully to the csv database!")
 
     elif question == "2":
         print("\nYou selected: Check product!")
         print(sub_menu)
         sub_question = input("Enter the leter to choose: ").upper()
-        if sub_question == "a":
-            pass
+
+        if sub_question == "A":
+            product_name = input("Enter the product's name you are looking for: ").capitalize()
+            app.check_specific_product(product_name)
+
+        if sub_question == "B":
+            app.check_product_list()
+
+        if sub_question == "C":
+            app.check_product_list()
 
     elif question == "5":
         keep = False
 
+app.save_to_database()
 bye_message_function()
