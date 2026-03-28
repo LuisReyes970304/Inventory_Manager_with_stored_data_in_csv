@@ -18,6 +18,7 @@ while keep:
         price = price_validator(name)
         quantity = amount_validator(name)
         app.add_new_order(name=name, price=price, quantity=quantity)
+        app.save_to_database()
 
     elif question == "2":
         print("\nYou selected: Check product!")
