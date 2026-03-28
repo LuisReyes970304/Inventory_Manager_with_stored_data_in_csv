@@ -1,7 +1,9 @@
 from rich.console import Console
 from rich.table import Table
 
-def create_table(product: str, price: float, quantity: int, subtotal: float) -> Table:
+def create_table(product: str, price: float, quantity: int, subtotal: float) -> str:
+    """This function creates a table with the product information, it takes the product name, price, quantity and subtotal as arguments and creates a table with that information."""
+    print("")
     table = Table(title=f"{product}")
 
     table.add_column("Product Name", justify="center", style="cyan", no_wrap=True)
@@ -15,7 +17,11 @@ def create_table(product: str, price: float, quantity: int, subtotal: float) -> 
     console.print(table)
     return "Table created"
 
-def create_loop_table(product_list: dict) -> Table:
+#**********************************************************************************************#
+
+def create_loop_table(product_list: dict) -> str:
+    """This function creates a table with all the products information, it takes the product name, price, quantity and subtotal as arguments and creates a table with that information."""
+    print("")
     table = Table(title=f"Products")
 
     table.add_column("Product Name", justify="center", style="cyan", no_wrap=True)

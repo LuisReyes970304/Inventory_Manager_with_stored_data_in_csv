@@ -31,6 +31,14 @@ value_error_integer = """
 
 """
 
+invalid_name = """
+       **********************************
+         Invalid product name!!!
+         Product name cannot be Empty.
+       **********************************
+         Please try again:
+
+"""
 
 invalid_amount = """
        **********************************
@@ -66,7 +74,9 @@ sub_menu = """
       A. Check specific product.
       B. Check the list of products.
       C. Check the more expensive product.
-      D. Come back to the main manu.
+      D. Check total earnings.
+      E. Come back to the main manu.
+
 """
 
 
@@ -113,3 +123,12 @@ def menu_function():
         print(i, end="", flush=True)
         sleep(0.01)
 
+def invalid_name_message():     
+    for i in invalid_name:
+        print(i, end="", flush=True)
+        sleep(0.01)
+
+def sub_menu_function():
+    for i in sub_menu:
+        print(i, end="", flush=True)
+        sleep(0.01)
